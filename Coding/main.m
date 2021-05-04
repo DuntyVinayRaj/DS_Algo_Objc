@@ -17,8 +17,9 @@
 #import "PriorityQueue.h"
 #import "BST.h"
 #import "AllSubSequences.h"
-#import "Graphs/GraphADT.h"
-#import "Graphs/GraphDFS.h"
+#import "DataStructure/ADTs/GraphADT.h"
+#import "DataStructure/Graphs/GraphDFS.h"
+#import "DataStructure/Graphs/GraphBFS.h"
 
 // Wrap practice methods here
 @interface Solutions : NSObject
@@ -172,14 +173,24 @@ int main(int argc, const char * argv[]) {
                 break;
             case 13:
             {
-                GraphADT *graphADT = [[GraphADT alloc] initWithVertices:5];
-                [graphADT addEdge:0 toV2:3];
+                
+                GraphADT *graphADT = [[GraphADT alloc] initWithVertices:4];
+                [graphADT addEdge:0 toV2:1];
                 [graphADT addEdge:0 toV2:2];
-                [graphADT addEdge:1 toV2:4];
-                [graphADT addEdge:3 toV2:4];
+                [graphADT addEdge:2 toV2:0];
+//                [graphADT addEdge:2 toV2:3];
+                [graphADT addEdge:3 toV2:3];
+                
                 NSLog(@"%@", [graphADT dsiplayGraph]);
                 
                 [GraphDFS DepthFirstPaths:graphADT source:0];
+                [GraphBFS BreadthFirstPaths:graphADT source:2];
+                
+                GraphDFS *gDFS = [[GraphDFS alloc] initWithgraph:graphADT source:0];
+                int vertex1 = 2;
+                int vertex2 = 3;
+                BOOL isConnected = [gDFS isVertex:vertex1 connectedTo:vertex2];
+                NSLog(@"Vertex %d is connected to %d ? - %d", vertex1, vertex2, isConnected);
             }
                 break;
             default:

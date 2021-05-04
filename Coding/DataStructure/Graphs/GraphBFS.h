@@ -1,5 +1,5 @@
 //
-//  GraphDFS.h
+//  GraphBFS.h
 //  Coding
 //
 //  Created by Dunty Vinay Raj  on 03/05/21.
@@ -10,9 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GraphDFS : NSObject
+@interface GraphBFS : NSObject
 
-+ (void)DepthFirstPaths:(GraphADT *)graph source:(int)source;
++ (void)BreadthFirstPaths:(GraphADT *)graph source:(int)source;
 
 @end
 

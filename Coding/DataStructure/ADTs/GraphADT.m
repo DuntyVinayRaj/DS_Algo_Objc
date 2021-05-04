@@ -30,6 +30,11 @@
     return self.adjVetices;
 }
 
+- (NSString *) description
+{
+    return [NSString stringWithFormat:@"%@", self.adjVetices];
+}
+
 @end
 
 @interface GraphADT()
