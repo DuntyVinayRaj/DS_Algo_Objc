@@ -20,6 +20,7 @@
 #import "DataStructure/ADTs/GraphADT.h"
 #import "DataStructure/Graphs/GraphDFS.h"
 #import "DataStructure/Graphs/GraphBFS.h"
+#import "BoxMaxStack.h"
 
 // Wrap practice methods here
 @interface Solutions : NSObject
@@ -36,7 +37,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 13;
+        int choice = 14;
         switch (choice) {
             case 1:
             {
@@ -178,7 +179,7 @@ int main(int argc, const char * argv[]) {
                 [graphADT addEdge:0 toV2:1];
                 [graphADT addEdge:0 toV2:2];
                 [graphADT addEdge:2 toV2:0];
-//                [graphADT addEdge:2 toV2:3];
+                [graphADT addEdge:2 toV2:3];
                 [graphADT addEdge:3 toV2:3];
                 
                 NSLog(@"%@", [graphADT dsiplayGraph]);
@@ -191,6 +192,19 @@ int main(int argc, const char * argv[]) {
                 int vertex2 = 3;
                 BOOL isConnected = [gDFS isVertex:vertex1 connectedTo:vertex2];
                 NSLog(@"Vertex %d is connected to %d ? - %d", vertex1, vertex2, isConnected);
+            }
+                break;
+            case 14:
+            {
+                NSMutableArray *boxes = NSMutableArray.new;
+                [boxes addObject: @{@"W": @(10), @"H": @(10)}];
+                [boxes addObject: @{@"W": @(10), @"H": @(3)}];
+                [boxes addObject: @{@"W": @(10), @"H": @(2)}];
+                [boxes addObject: @{@"W": @(2), @"H": @(4)}];
+                [boxes addObject: @{@"W": @(1), @"H": @(1)}];
+                
+                int maxCount = [[BoxMaxStack alloc] generateMaxStack:boxes];
+                NSLog(@"Max stack is %d", maxCount);
             }
                 break;
             default:
