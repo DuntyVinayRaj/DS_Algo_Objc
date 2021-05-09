@@ -64,7 +64,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 17;
+        int choice = 14;
         switch (choice) {
             case 1:
             {
@@ -224,8 +224,10 @@ int main(int argc, const char * argv[]) {
             case 14:
             {
                 Tree *head = [[Solutions alloc] initializeTree];
+                NSLog(@"Level order is \n");
+                NSLog(@"%@", [head printLevelOrder]);
+                NSLog(@"Zig Zag order is \n");
                 [TreeZigZag printTreeNodesInZigZagOrder:head];
-                
             }
                 break;
             case 15:

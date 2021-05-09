@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)push:(id)element;
 - (id)pop;
 - (id)top;
+- (int)itemCount;
 
 @end
 

@@ -6,6 +6,7 @@
 //
 
 #import "Tree.h"
+#import "Queue.h"
 
 @interface Tree()
 @property Tree *left;
@@ -89,6 +90,22 @@
     [self printInOrder:node.left];
     printf("%d \t", node.data);
     [self printInOrder:node.right];
+}
+
+- (NSString *)printLevelOrder
+{
+    NSString *zigZag = @"";
+    Queue *q = [[Queue alloc] init];
+    [q enqueueObject:self];
+    while (q.itemCount > 0) {
+        Tree *node = [q dequeueObject];
+        zigZag = [zigZag stringByAppendingFormat:@"%d \t", node.getNodeData];
+        Tree *leftNode = [node getLeftNode];
+        Tree *rightNode = [node getRightNode];
+        [q enqueueObject:leftNode];
+        [q enqueueObject:rightNode];
+    }
+    return zigZag;
 }
 
 @end

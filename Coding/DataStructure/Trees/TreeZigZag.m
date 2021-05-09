@@ -6,55 +6,39 @@
 //
 
 #import "TreeZigZag.h"
+#import "MyStack.h"
 #import "Queue.h"
 
-@interface TreeZigZag()
-@end
-
 @implementation TreeZigZag
-
 + (void)printTreeNodesInZigZagOrder:(Tree *)head
 {
     NSString *zigZag = @"";
     Queue *q = [[Queue alloc] init];
+    MyStack *s = [[MyStack alloc] init];
     
     [q enqueueObject:head];
-    
     while (q.itemCount > 0) {
-        
         Tree *node = [q dequeueObject];
-        zigZag = [zigZag stringByAppendingFormat:@" %d", node.getNodeData];
+        int level = [node getLevelOfNode:head];
         
         Tree *leftNode = [node getLeftNode];
         Tree *rightNode = [node getRightNode];
         
-        int level = [node getLevelOfNode:head];
-        
-        
-        
         if ((level % 2) == 0) {
-            if (rightNode) {
-                [q enqueueObject:rightNode];
-            }
-            
-            if (leftNode) {
-                [q enqueueObject:leftNode];
-            }
+            zigZag = [zigZag stringByAppendingFormat:@"%d \t", node.getNodeData];
+            [s push:leftNode];
+            [s push:rightNode];
         } else {
-            
-            if (leftNode) {
-                [q enqueueObject:leftNode];
-            }
-            
-            if (rightNode) {
-                [q enqueueObject:rightNode];
+            Tree *node = s.pop;
+            while (node) {
+                zigZag = [zigZag stringByAppendingFormat:@"%d \t", node.getNodeData];
+                node = s.pop;
             }
         }
         
+        [q enqueueObject:leftNode];
+        [q enqueueObject:rightNode];
     }
-    
     NSLog(@"%@", zigZag);
-    
 }
-
 @end

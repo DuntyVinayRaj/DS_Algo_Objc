@@ -24,6 +24,10 @@
 
 - (void)enqueueObject:(id)object
 {
+    if (!object) {
+        return;
+    }
+    
     if (!self.items) {
         self.items = NSArray.new;
     }

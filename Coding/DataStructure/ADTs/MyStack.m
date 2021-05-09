@@ -62,9 +62,14 @@
 #pragma mark Stack functions
 - (void)push:(id)element
 {
+    if (!element) {
+        return;
+    }
+    
     ListNode *node = [self getNode:element];
     if (!self.head) {
         self.head = node;
+        return;
     }
     
     node.next = self.head;
@@ -83,4 +88,14 @@
     return self.head.data;
 }
 
+- (int)itemCount
+{
+    int i=0;
+    ListNode *node = self.head;
+    while (node) {
+        i++;
+        node = node.next;
+    }
+    return i;
+}
 @end
