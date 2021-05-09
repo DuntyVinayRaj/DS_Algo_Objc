@@ -28,10 +28,7 @@
     int box1H = ((NSNumber *)box1[@"H"]).intValue;
     int box2H = ((NSNumber *)box2[@"H"]).intValue;
     
-    if (box1W <= box2W && box1H <= box2H) {
-        return YES;
-    }
-    return NO;
+    return (box1W <= box2W && box1H <= box2H);
 }
 
 - (int) maxStackRec:(NSArray *)boxes index:(int)index {
