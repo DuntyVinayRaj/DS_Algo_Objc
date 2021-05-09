@@ -22,6 +22,7 @@
 #import "DataStructure/Graphs/GraphBFS.h"
 #import "DataStructure/Trees/TreeZigZag.h"
 #import "DataStructure/Trees/PathBetweenNodes.h"
+#import "BoxMaxStack.h"
 
 // Wrap practice methods here
 @interface Solutions : NSObject
@@ -180,7 +181,7 @@ int main(int argc, const char * argv[]) {
                 [graphADT addEdge:0 toV2:1];
                 [graphADT addEdge:0 toV2:2];
                 [graphADT addEdge:2 toV2:0];
-//                [graphADT addEdge:2 toV2:3];
+                [graphADT addEdge:2 toV2:3];
                 [graphADT addEdge:3 toV2:3];
                 
                 NSLog(@"%@", [graphADT dsiplayGraph]);
@@ -255,6 +256,19 @@ int main(int argc, const char * argv[]) {
                 
                 NSArray *path4 = [PathBetweenNodes pathBetweenNode:4 andNode:3 root:head];
                 NSLog(@"Path is %@", path4);
+            }
+                break;
+            case 16:
+            {
+                NSMutableArray *boxes = NSMutableArray.new;
+                [boxes addObject: @{@"W": @(10), @"H": @(10)}];
+                [boxes addObject: @{@"W": @(10), @"H": @(3)}];
+                [boxes addObject: @{@"W": @(10), @"H": @(2)}];
+                [boxes addObject: @{@"W": @(2), @"H": @(4)}];
+                [boxes addObject: @{@"W": @(1), @"H": @(1)}];
+                
+                int maxCount = [[BoxMaxStack alloc] generateMaxStack:boxes];
+                NSLog(@"Max stack is %d", maxCount);
             }
                 break;
             default:
