@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (int)getLevelOfNode:(Tree *)head;
 - (void)display;
 - (NSString *)printLevelOrder;
+- (int)heightOfTree:(Tree *)head height:(int)height;
 
 @end
 

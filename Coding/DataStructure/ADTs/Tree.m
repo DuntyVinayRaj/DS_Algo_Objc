@@ -108,4 +108,13 @@
     return zigZag;
 }
 
+- (int)heightOfTree:(Tree *)head height:(int)height
+{
+    if (head == nil) {
+        return height;
+    }
+    return MAX([self heightOfTree:head.getLeftNode height:height+1],
+               [self heightOfTree:head.getRightNode height:height+1]);
+}
+
 @end

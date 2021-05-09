@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CodingProblems : NSObject
 
-+ (void)codingProblemsMenu;
++ (void)codingProblemsMenu:(int)choice;
 
 @end
 

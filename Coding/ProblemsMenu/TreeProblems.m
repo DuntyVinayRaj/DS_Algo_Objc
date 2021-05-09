@@ -12,6 +12,7 @@
 #import "TreeZigZag.h"
 #import "MirrorATree.h"
 #import "PriorityQueue.h"
+#import "SumOfDeepestNodes.h"
 
 @implementation TreeProblems
 
@@ -45,10 +46,8 @@
     NSLog(@"Max eleement is - %d", [pq maxElement]);
 }
 
-+ (void)treeProblemsMenu
++ (void)treeProblemsMenu:(int)choice
 {
-    NSInteger choice = 1;
-    
     switch (choice) {
         case 1:
         {
@@ -151,6 +150,17 @@
             
             [pq deleteMax];
             [sol printAttributesOfPQ:pq];
+        }
+            break;
+        case 6:
+        {
+            NSArray *ipValues = @[@1,@2,@3,@4,@5,@-1,@6,@7,@-1,@-1,@-1,@-1,@8];
+            int sum = [SumOfDeepestNodes getSumOfDeepestNodes:ipValues];
+            NSLog(@"Sum is %d", sum);
+            
+            NSArray *ipValues1 = @[@6,@7,@8,@2,@7,@1,@3,@9,@-1,@1,@4,@-1,@-1,@-1,@5];
+            int sum1 = [SumOfDeepestNodes getSumOfDeepestNodes:ipValues1];
+            NSLog(@"Sum is %d", sum1);
         }
             break;
         default:

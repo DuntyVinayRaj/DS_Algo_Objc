@@ -13,9 +13,8 @@
 
 @implementation CodingProblems
 
-+ (void)codingProblemsMenu
++ (void)codingProblemsMenu:(int)choice
 {
-    NSInteger choice = 1;
     switch (choice) {
         case 1:
         {

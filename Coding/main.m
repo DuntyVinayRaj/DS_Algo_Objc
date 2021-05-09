@@ -13,16 +13,16 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 1;
+        int choice = 3;
         switch (choice) {
             case 1:
-                [CodingProblems codingProblemsMenu];
+                [CodingProblems codingProblemsMenu:1];
                 break;
             case 2:
                 [ArrayProblems arrayProblemsMenu];
                 break;
             case 3:
-                [TreeProblems treeProblemsMenu];
+                [TreeProblems treeProblemsMenu:6];
                 break;
             case 4:
                 [GraphProblems graphProblemsMenu];
