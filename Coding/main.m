@@ -23,6 +23,7 @@
 #import "DataStructure/Trees/TreeZigZag.h"
 #import "DataStructure/Trees/PathBetweenNodes.h"
 #import "BoxMaxStack.h"
+#import "MirrorATree.h"
 
 // Wrap practice methods here
 @interface Solutions : NSObject
@@ -35,11 +36,35 @@
     [pq display];
     NSLog(@"Max eleement is - %d", [pq maxElement]);
 }
+
+- (Tree *)initializeTree
+{
+    Tree *head = [[Tree alloc] initWithData:0 left:nil right:nil];
+    Tree *node1 = [[Tree alloc] initWithData:1 left:nil right:nil];
+    Tree *node2 = [[Tree alloc] initWithData:2 left:nil right:nil];
+    
+    [head addLeftNode:node1];
+    [head addRightNode:node2];
+    
+    Tree *node3 = [[Tree alloc] initWithData:3 left:nil right:nil];
+    
+    Tree *node4 = [[Tree alloc] initWithData:4 left:nil right:nil];
+    Tree *node5 = [[Tree alloc] initWithData:5 left:nil right:nil];
+    Tree *node6 = [[Tree alloc] initWithData:6 left:node5 right:node4];
+    
+    [node1 addRightNode:node3];
+    [node1 addLeftNode:node6];
+    
+    Tree *node7 = [[Tree alloc] initWithData:7 left:nil right:nil];
+    [node2 addRightNode:node7];
+    
+    return head;
+}
 @end
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 15;
+        int choice = 17;
         switch (choice) {
             case 1:
             {
@@ -198,49 +223,14 @@ int main(int argc, const char * argv[]) {
                 break;
             case 14:
             {
-                Tree *head = [[Tree alloc] initWithData:0 left:nil right:nil];
-                Tree *node1 = [[Tree alloc] initWithData:1 left:nil right:nil];
-                Tree *node2 = [[Tree alloc] initWithData:2 left:nil right:nil];
-                
-                [head addLeftNode:node1];
-                [head addRightNode:node2];
-                
-                Tree *node3 = [[Tree alloc] initWithData:3 left:nil right:nil];
-                
-                Tree *node4 = [[Tree alloc] initWithData:4 left:nil right:nil];
-                Tree *node5 = [[Tree alloc] initWithData:5 left:nil right:nil];
-                Tree *node6 = [[Tree alloc] initWithData:6 left:node5 right:node4];
-                
-                [node1 addRightNode:node3];
-                [node1 addLeftNode:node6];
-                
-                Tree *node7 = [[Tree alloc] initWithData:7 left:nil right:nil];
-                [node2 addRightNode:node7];
-                
+                Tree *head = [[Solutions alloc] initializeTree];
                 [TreeZigZag printTreeNodesInZigZagOrder:head];
                 
             }
                 break;
             case 15:
             {
-                Tree *head = [[Tree alloc] initWithData:0 left:nil right:nil];
-                Tree *node1 = [[Tree alloc] initWithData:1 left:nil right:nil];
-                Tree *node2 = [[Tree alloc] initWithData:2 left:nil right:nil];
-                
-                [head addLeftNode:node1];
-                [head addRightNode:node2];
-                
-                Tree *node3 = [[Tree alloc] initWithData:3 left:nil right:nil];
-                
-                Tree *node4 = [[Tree alloc] initWithData:4 left:nil right:nil];
-                Tree *node5 = [[Tree alloc] initWithData:5 left:nil right:nil];
-                Tree *node6 = [[Tree alloc] initWithData:6 left:node5 right:node4];
-                
-                [node1 addRightNode:node3];
-                [node1 addLeftNode:node6];
-                
-                Tree *node7 = [[Tree alloc] initWithData:7 left:nil right:nil];
-                [node2 addRightNode:node7];
+                Tree *head = [[Solutions alloc] initializeTree];
                 
                 NSArray *path = [PathBetweenNodes pathBetweenNode:6 andNode:2 root:head];
                 NSLog(@"Path is %@", path);
@@ -269,6 +259,18 @@ int main(int argc, const char * argv[]) {
                 
                 int maxCount = [[BoxMaxStack alloc] generateMaxStack:boxes];
                 NSLog(@"Max stack is %d", maxCount);
+            }
+                break;
+            case 17:
+            {
+                Tree *head = [[Solutions alloc] initializeTree];
+                printf("Before mirroring\n");
+                [head display];
+                printf("\n");
+                [MirrorATree mirrorOfATree:head];
+                printf("After mirroring \n");
+                [head display];
+                printf("\n");
             }
                 break;
             default:

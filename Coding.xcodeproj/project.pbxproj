@@ -15,6 +15,7 @@
 		2A3C4FDE264197260008BB9F /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C4FDD264197260008BB9F /* Tree.m */; };
 		2A3C4FE1264197C70008BB9F /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C4FE0264197C70008BB9F /* Queue.m */; };
 		2AB4F11E2646C85700B5B1AC /* BoxMaxStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F11D2646C85700B5B1AC /* BoxMaxStack.m */; };
+		2AB4F1292647A09B00B5B1AC /* MirrorATree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F1282647A09B00B5B1AC /* MirrorATree.m */; };
 		2AFFF02F2630561B00BAC5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFFF02E2630561B00BAC5B5 /* main.m */; };
 		2AFFF0382635B60A00BAC5B5 /* ExpressionEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFFF0372635B60900BAC5B5 /* ExpressionEvaluation.m */; };
 		2AFFF03D2635B7E300BAC5B5 /* MyStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFFF03C2635B7E300BAC5B5 /* MyStack.m */; };
@@ -61,6 +62,8 @@
 		2A3C4FE0264197C70008BB9F /* Queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
 		2AB4F11C2646C85700B5B1AC /* BoxMaxStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxMaxStack.h; sourceTree = "<group>"; };
 		2AB4F11D2646C85700B5B1AC /* BoxMaxStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxMaxStack.m; sourceTree = "<group>"; };
+		2AB4F1272647A09B00B5B1AC /* MirrorATree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorATree.h; sourceTree = "<group>"; };
+		2AB4F1282647A09B00B5B1AC /* MirrorATree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MirrorATree.m; sourceTree = "<group>"; };
 		2AFFF02B2630561B00BAC5B5 /* Coding */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coding; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFFF02E2630561B00BAC5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AFFF0362635B60900BAC5B5 /* ExpressionEvaluation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressionEvaluation.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 		2A3C4FE3264199200008BB9F /* Trees */ = {
 			isa = PBXGroup;
 			children = (
+				2AB4F1272647A09B00B5B1AC /* MirrorATree.h */,
+				2AB4F1282647A09B00B5B1AC /* MirrorATree.m */,
 				2A3C4FD92641957C0008BB9F /* TreeZigZag.h */,
 				2A3C4FDA2641957C0008BB9F /* TreeZigZag.m */,
 				2A126DA22646D03C00D213B9 /* PathBetweenNodes.h */,
@@ -288,6 +293,7 @@
 				2A3C4FD22640157C0008BB9F /* GraphADT.m in Sources */,
 				2AFFF03D2635B7E300BAC5B5 /* MyStack.m in Sources */,
 				2AFFF066263975A100BAC5B5 /* QuickSelect.m in Sources */,
+				2AB4F1292647A09B00B5B1AC /* MirrorATree.m in Sources */,
 				2AFFF0412636DE0000BAC5B5 /* LongestPalindromeSS.m in Sources */,
 				2AFFF071263B385900BAC5B5 /* BST.m in Sources */,
 				2A3C4FDE264197260008BB9F /* Tree.m in Sources */,

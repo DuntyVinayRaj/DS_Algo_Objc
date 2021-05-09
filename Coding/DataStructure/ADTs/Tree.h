@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (Tree *)getLeftNode;
 - (Tree *)getRightNode;
 - (int)getLevelOfNode:(Tree *)head;
+- (void)display;
 
 @end
 

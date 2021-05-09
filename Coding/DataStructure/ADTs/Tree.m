@@ -75,4 +75,20 @@
     return downLevel;
 }
 
+- (void)display
+{
+    [self printInOrder:self];
+}
+
+- (void)printInOrder:(Tree *)node
+{
+    if (node == nil) {
+        return;
+    }
+    
+    [self printInOrder:node.left];
+    printf("%d \t", node.data);
+    [self printInOrder:node.right];
+}
+
 @end
