@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TreeZigZag : NSObject
 
-- (void)printTreeNodesInZigZagOrder:(Tree *)head;
++ (void)printTreeNodesInZigZagOrder:(Tree *)head;
 
 @end
 

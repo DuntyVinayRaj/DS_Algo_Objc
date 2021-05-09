@@ -11,8 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Queue : NSObject
 
-- (void)enqueue:(int)vertex;
-- (int)dequeue;
+- (void)enqueueInt:(int)item;
+- (void)enqueueObject:(id)object;
+
+- (int)dequeueInt;
+- (id)dequeueObject;
+
 - (NSArray *)itemsInQueue;
 - (NSInteger)itemCount;
 

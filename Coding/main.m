@@ -20,6 +20,8 @@
 #import "DataStructure/ADTs/GraphADT.h"
 #import "DataStructure/Graphs/GraphDFS.h"
 #import "DataStructure/Graphs/GraphBFS.h"
+#import "DataStructure/Trees/TreeZigZag.h"
+#import "DataStructure/Trees/PathBetweenNodes.h"
 
 // Wrap practice methods here
 @interface Solutions : NSObject
@@ -36,7 +38,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 13;
+        int choice = 15;
         switch (choice) {
             case 1:
             {
@@ -191,6 +193,68 @@ int main(int argc, const char * argv[]) {
                 int vertex2 = 3;
                 BOOL isConnected = [gDFS isVertex:vertex1 connectedTo:vertex2];
                 NSLog(@"Vertex %d is connected to %d ? - %d", vertex1, vertex2, isConnected);
+            }
+                break;
+            case 14:
+            {
+                Tree *head = [[Tree alloc] initWithData:0 left:nil right:nil];
+                Tree *node1 = [[Tree alloc] initWithData:1 left:nil right:nil];
+                Tree *node2 = [[Tree alloc] initWithData:2 left:nil right:nil];
+                
+                [head addLeftNode:node1];
+                [head addRightNode:node2];
+                
+                Tree *node3 = [[Tree alloc] initWithData:3 left:nil right:nil];
+                
+                Tree *node4 = [[Tree alloc] initWithData:4 left:nil right:nil];
+                Tree *node5 = [[Tree alloc] initWithData:5 left:nil right:nil];
+                Tree *node6 = [[Tree alloc] initWithData:6 left:node5 right:node4];
+                
+                [node1 addRightNode:node3];
+                [node1 addLeftNode:node6];
+                
+                Tree *node7 = [[Tree alloc] initWithData:7 left:nil right:nil];
+                [node2 addRightNode:node7];
+                
+                [TreeZigZag printTreeNodesInZigZagOrder:head];
+                
+            }
+                break;
+            case 15:
+            {
+                Tree *head = [[Tree alloc] initWithData:0 left:nil right:nil];
+                Tree *node1 = [[Tree alloc] initWithData:1 left:nil right:nil];
+                Tree *node2 = [[Tree alloc] initWithData:2 left:nil right:nil];
+                
+                [head addLeftNode:node1];
+                [head addRightNode:node2];
+                
+                Tree *node3 = [[Tree alloc] initWithData:3 left:nil right:nil];
+                
+                Tree *node4 = [[Tree alloc] initWithData:4 left:nil right:nil];
+                Tree *node5 = [[Tree alloc] initWithData:5 left:nil right:nil];
+                Tree *node6 = [[Tree alloc] initWithData:6 left:node5 right:node4];
+                
+                [node1 addRightNode:node3];
+                [node1 addLeftNode:node6];
+                
+                Tree *node7 = [[Tree alloc] initWithData:7 left:nil right:nil];
+                [node2 addRightNode:node7];
+                
+                NSArray *path = [PathBetweenNodes pathBetweenNode:6 andNode:2 root:head];
+                NSLog(@"Path is %@", path);
+                
+                NSArray *path1 = [PathBetweenNodes pathBetweenNode:6 andNode:3 root:head];
+                NSLog(@"Path is %@", path1);
+                
+                NSArray *path2 = [PathBetweenNodes pathBetweenNode:5 andNode:3 root:head];
+                NSLog(@"Path is %@", path2);
+                
+                NSArray *path3 = [PathBetweenNodes pathBetweenNode:7 andNode:3 root:head];
+                NSLog(@"Path is %@", path3);
+                
+                NSArray *path4 = [PathBetweenNodes pathBetweenNode:4 andNode:3 root:head];
+                NSLog(@"Path is %@", path4);
             }
                 break;
             default:

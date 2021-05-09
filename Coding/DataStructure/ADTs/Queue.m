@@ -8,36 +8,53 @@
 #import "Queue.h"
 
 @interface Queue()
-@property NSArray *vertexQueue;
+@property NSArray *items;
 @end
 
 @implementation Queue
-- (void)enqueue:(int)vertex
+
+- (void)enqueueInt:(int)item
 {
-    if (!self.vertexQueue) {
-        self.vertexQueue = NSArray.new;
+    if (!self.items) {
+        self.items = NSArray.new;
     }
-    NSMutableArray *vertexQueueM = self.vertexQueue.mutableCopy;
-    [vertexQueueM addObject:@(vertex)];
-    self.vertexQueue = vertexQueueM.copy;
+    
+    [self enqueueObject:@(item)];
 }
 
-- (int)dequeue
+- (void)enqueueObject:(id)object
 {
-    NSMutableArray *vertexQueueM = self.vertexQueue.mutableCopy;
-    int vertex = ((NSNumber *)[vertexQueueM firstObject]).intValue;
-    [vertexQueueM removeObjectAtIndex:0];
-    self.vertexQueue = vertexQueueM.copy;
-    return vertex;
+    if (!self.items) {
+        self.items = NSArray.new;
+    }
+    NSMutableArray *itemsM = self.items.mutableCopy;
+    [itemsM addObject:object];
+    self.items = itemsM.copy;
+}
+
+- (int)dequeueInt
+{
+    id object = [self dequeueObject];
+    int item = ((NSNumber *)object).intValue;
+    return item;
+}
+
+- (id)dequeueObject
+{
+    NSMutableArray *itemsM = self.items.mutableCopy;
+    id object = itemsM.firstObject;
+    [itemsM removeObjectAtIndex:0];
+    self.items = itemsM.copy;
+    return object;
 }
 
 - (NSArray *)itemsInQueue
 {
-    return self.vertexQueue;
+    return self.items;
 }
 
 - (NSInteger)itemCount
 {
-    return self.vertexQueue.count;
+    return self.items.count;
 }
 @end

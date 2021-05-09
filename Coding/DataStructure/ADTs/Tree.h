@@ -10,7 +10,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Tree : NSObject
-- (instancetype)initWithData:(int)data left:(Tree *)left right:(Tree *)right;
+- (instancetype)initWithData:(int)data left:(Tree *_Nullable)left right:(Tree *_Nullable)right;
+- (void)addLeftNode:(Tree *)left;
+- (void)addRightNode:(Tree *)right;
+- (int)getNodeData;
+- (Tree *)getLeftNode;
+- (Tree *)getRightNode;
+- (int)getLevelOfNode:(Tree *)head;
+
 @end
 
 NS_ASSUME_NONNULL_END

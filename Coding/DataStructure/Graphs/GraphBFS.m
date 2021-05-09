@@ -46,10 +46,10 @@
 - (void)bfs:(int)vertex
 {
     [self markVertex:vertex];
-    [self.bfsQueue enqueue:vertex];
+    [self.bfsQueue enqueueInt:vertex];
     
     while ([self.bfsQueue itemCount] > 0) {
-        int dequeueVertex = [self.bfsQueue dequeue];
+        int dequeueVertex = [self.bfsQueue dequeueInt];
         
         self.bfsPath = [self.bfsPath stringByAppendingFormat:@" -> %@", @(dequeueVertex)];
         NSArray *adjVertices = [self.graph adjacentVerticesToVetex:dequeueVertex];
@@ -57,7 +57,7 @@
         for (NSNumber *vertex in adjVertices) {
             if (![self isVertexMarked:vertex.intValue]) {
                 [self markVertex:vertex.intValue];
-                [self.bfsQueue enqueue:vertex.intValue];
+                [self.bfsQueue enqueueInt:vertex.intValue];
             }
         }
         
