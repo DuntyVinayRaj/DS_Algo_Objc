@@ -18,11 +18,10 @@
 
 @implementation GraphDFS
 
-- (instancetype)initWithgraph:(GraphADT *)graph source:(int)source
+- (instancetype)initWithgraph:(GraphADT *)graph
 {
     if (self = [super init]) {
         _graph = graph;
-        _source = source;
         _dfsPath = @"";
         
         NSMutableArray *markedM = NSMutableArray.new;
@@ -42,7 +41,7 @@
 
 + (void)DepthFirstPaths:(GraphADT *)graph source:(int)source
 {
-    GraphDFS *dfs = [[GraphDFS alloc] initWithgraph:graph source:source];
+    GraphDFS *dfs = [[GraphDFS alloc] initWithgraph:graph];
     [dfs dfs:source];
     NSLog(@"DFS for given graph is");
     NSLog(@"%@", dfs.dfsPath);
@@ -132,10 +131,24 @@
 
 - (BOOL)isCyclic:(GraphADT *)graph source:(int)source
 {
-    
-    
-    
-    return NO;
+    BOOL isCyclic = [self dfs:graph vertex:source withParent:source];
+    return isCyclic;
 }
 
+- (BOOL)dfs:(GraphADT *)graph vertex:(int)vertex withParent:(int)parent
+{
+    BOOL isCyclic = NO;
+    [self markVertex:vertex];
+    NSArray *adjVertices = [self.graph adjacentVerticesToVetex:vertex];
+    for (NSNumber *adjVertex in adjVertices) {
+        BOOL isMarked = [self isVertexMarked:adjVertex.intValue];
+        if (isMarked && (adjVertex.intValue != parent)) {
+            return YES;
+        }
+        if (!isMarked) {
+            isCyclic = [self dfs:graph vertex:adjVertex.intValue withParent:vertex];
+        }
+    }
+    return isCyclic;
+}
 @end

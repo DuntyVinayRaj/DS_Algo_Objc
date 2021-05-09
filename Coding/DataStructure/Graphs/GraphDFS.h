@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)DepthFirstPaths:(GraphADT *)graph source:(int)source;
 
-- (instancetype)initWithgraph:(GraphADT *)graph source:(int)source;
+- (instancetype)initWithgraph:(GraphADT *)graph;
 - (BOOL)isVertex:(int)v1 connectedTo:(int)v2;
+- (BOOL)isCyclic:(GraphADT *)graph source:(int)source;
 
 @end
 

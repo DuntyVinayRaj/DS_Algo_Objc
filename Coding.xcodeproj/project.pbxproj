@@ -16,6 +16,10 @@
 		2A3C4FE1264197C70008BB9F /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C4FE0264197C70008BB9F /* Queue.m */; };
 		2AB4F11E2646C85700B5B1AC /* BoxMaxStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F11D2646C85700B5B1AC /* BoxMaxStack.m */; };
 		2AB4F1292647A09B00B5B1AC /* MirrorATree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F1282647A09B00B5B1AC /* MirrorATree.m */; };
+		2AB4F1322647CFDC00B5B1AC /* TreeProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F1312647CFDC00B5B1AC /* TreeProblems.m */; };
+		2AB4F1372647CFE900B5B1AC /* GraphProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F1362647CFE900B5B1AC /* GraphProblems.m */; };
+		2AB4F13B2647D08400B5B1AC /* CodingProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F13A2647D08400B5B1AC /* CodingProblems.m */; };
+		2AB4F13F2647D13B00B5B1AC /* ArrayProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F13E2647D13B00B5B1AC /* ArrayProblems.m */; };
 		2AFFF02F2630561B00BAC5B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFFF02E2630561B00BAC5B5 /* main.m */; };
 		2AFFF0382635B60A00BAC5B5 /* ExpressionEvaluation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFFF0372635B60900BAC5B5 /* ExpressionEvaluation.m */; };
 		2AFFF03D2635B7E300BAC5B5 /* MyStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFFF03C2635B7E300BAC5B5 /* MyStack.m */; };
@@ -64,6 +68,14 @@
 		2AB4F11D2646C85700B5B1AC /* BoxMaxStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxMaxStack.m; sourceTree = "<group>"; };
 		2AB4F1272647A09B00B5B1AC /* MirrorATree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorATree.h; sourceTree = "<group>"; };
 		2AB4F1282647A09B00B5B1AC /* MirrorATree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MirrorATree.m; sourceTree = "<group>"; };
+		2AB4F1302647CFDB00B5B1AC /* TreeProblems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeProblems.h; sourceTree = "<group>"; };
+		2AB4F1312647CFDC00B5B1AC /* TreeProblems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeProblems.m; sourceTree = "<group>"; };
+		2AB4F1352647CFE900B5B1AC /* GraphProblems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphProblems.h; sourceTree = "<group>"; };
+		2AB4F1362647CFE900B5B1AC /* GraphProblems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphProblems.m; sourceTree = "<group>"; };
+		2AB4F1392647D08400B5B1AC /* CodingProblems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodingProblems.h; sourceTree = "<group>"; };
+		2AB4F13A2647D08400B5B1AC /* CodingProblems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodingProblems.m; sourceTree = "<group>"; };
+		2AB4F13D2647D13B00B5B1AC /* ArrayProblems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrayProblems.h; sourceTree = "<group>"; };
+		2AB4F13E2647D13B00B5B1AC /* ArrayProblems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrayProblems.m; sourceTree = "<group>"; };
 		2AFFF02B2630561B00BAC5B5 /* Coding */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coding; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFFF02E2630561B00BAC5B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AFFF0362635B60900BAC5B5 /* ExpressionEvaluation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressionEvaluation.h; sourceTree = "<group>"; };
@@ -150,6 +162,21 @@
 			path = Trees;
 			sourceTree = "<group>";
 		};
+		2AB4F1422647D51C00B5B1AC /* ProblemsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2AB4F1302647CFDB00B5B1AC /* TreeProblems.h */,
+				2AB4F1312647CFDC00B5B1AC /* TreeProblems.m */,
+				2AB4F1352647CFE900B5B1AC /* GraphProblems.h */,
+				2AB4F1362647CFE900B5B1AC /* GraphProblems.m */,
+				2AB4F13D2647D13B00B5B1AC /* ArrayProblems.h */,
+				2AB4F13E2647D13B00B5B1AC /* ArrayProblems.m */,
+				2AB4F1392647D08400B5B1AC /* CodingProblems.h */,
+				2AB4F13A2647D08400B5B1AC /* CodingProblems.m */,
+			);
+			path = ProblemsMenu;
+			sourceTree = "<group>";
+		};
 		2AFFF0222630561B00BAC5B5 = {
 			isa = PBXGroup;
 			children = (
@@ -169,12 +196,13 @@
 		2AFFF02D2630561B00BAC5B5 /* Coding */ = {
 			isa = PBXGroup;
 			children = (
+				2AB4F1422647D51C00B5B1AC /* ProblemsMenu */,
 				2AFFF068263A96E300BAC5B5 /* DataStructure */,
 				2AFFF05A26383D7E00BAC5B5 /* CodingProblems */,
 				2AFFF05926383D5A00BAC5B5 /* Sorting */,
-				2AFFF02E2630561B00BAC5B5 /* main.m */,
 				2AFFF0432636DE4B00BAC5B5 /* Utils.h */,
 				2AFFF0442636DE4B00BAC5B5 /* Utils.m */,
+				2AFFF02E2630561B00BAC5B5 /* main.m */,
 			);
 			path = Coding;
 			sourceTree = "<group>";
@@ -303,14 +331,18 @@
 				2AFFF0492636E74100BAC5B5 /* MajorityElement.m in Sources */,
 				2A126DA42646D03C00D213B9 /* PathBetweenNodes.m in Sources */,
 				2AFFF0452636DE4B00BAC5B5 /* Utils.m in Sources */,
+				2AB4F1372647CFE900B5B1AC /* GraphProblems.m in Sources */,
 				2A3C4FD82640763C0008BB9F /* GraphBFS.m in Sources */,
 				2AB4F11E2646C85700B5B1AC /* BoxMaxStack.m in Sources */,
+				2AB4F13F2647D13B00B5B1AC /* ArrayProblems.m in Sources */,
 				2A3C4FDB2641957C0008BB9F /* TreeZigZag.m in Sources */,
+				2AB4F1322647CFDC00B5B1AC /* TreeProblems.m in Sources */,
 				2A3C4FD5264034680008BB9F /* GraphDFS.m in Sources */,
 				2AFFF052263744B900BAC5B5 /* MergeSort.m in Sources */,
 				2AFFF0622639494100BAC5B5 /* QuickSort.m in Sources */,
 				2AFFF05626381B8800BAC5B5 /* RearrangePositiveNegative.m in Sources */,
 				2AFFF0382635B60A00BAC5B5 /* ExpressionEvaluation.m in Sources */,
+				2AB4F13B2647D08400B5B1AC /* CodingProblems.m in Sources */,
 				2AFFF075263DEE9300BAC5B5 /* AllSubSequences.m in Sources */,
 				2AFFF05E26383DE200BAC5B5 /* InversionCount.m in Sources */,
 			);
