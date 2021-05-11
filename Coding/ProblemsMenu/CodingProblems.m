@@ -10,6 +10,9 @@
 #import "ExpressionEvaluation.h"
 #import "AllSubSequences.h"
 #import "BoxMaxStack.h"
+#import "StringRepeat.h"
+#import "WildcardPatternMatch.h"
+#import "StringInterleaving.h"
 
 @implementation CodingProblems
 
@@ -55,6 +58,62 @@
             
             int maxCount = [[BoxMaxStack alloc] generateMaxStack:boxes];
             NSLog(@"Max stack is %d", maxCount);
+        }
+            break;
+        case 6:
+        {
+            NSArray *testValues = @[@[@"abcabc", @3],
+                                    @[@"abcabc", @2],
+                                    @[@"abababa", @2],
+                                    @[@"aaa", @1]];
+            for (NSArray *test in testValues) {
+                NSString *ip = test.firstObject;
+                int k = ((NSNumber *)test.lastObject).intValue;
+                BOOL isRepeatitive = [StringRepeat isStringRepeatitionOfKChars:ip charCount:k];
+                NSLog(@"Is repeatitive string of chars %d", isRepeatitive);
+            }
+        }
+            break;
+        case 7:
+        {
+            NSArray *testValues = @[@[@"abc", @"?bc"],
+                                    @[@"bc", @"?bc"],
+                                    @[@"c", @"??c"],
+                                    @[@"", @"?????"],
+                                    @[@"abc", @"ac"],
+                                    @[@"abc", @"a?c"],
+                                    @[@"a", @"a??"],
+                                    @[@"abcdef", @"a???bc???ef"],
+                                    @[@"abcdef", @"a?bcef"],
+                                    @[@"abcdef", @"??????"]];
+        
+            
+            for (NSArray *test in testValues) {
+                NSString *ip = test.firstObject;
+                NSString *pattern = test.lastObject;
+                BOOL isMatch = [WildcardPatternMatch isPattern:pattern match:ip];
+                NSLog(@"Is pattern match %d", isMatch);
+            }
+            
+
+        }
+            break;
+        case 8:
+        {
+            NSArray *testValues = @[@[@"acdb", @"ab", @"cd"],
+            @[@"ADEBCF", @"ABC", @"DEF"],
+            @[@"ACBCD", @"ABC", @"CD"],
+            @[@"ACDABC", @"ABC", @"ACD"]];
+            
+            testValues = @[@[@"ACDABC", @"ABC", @"ACD"]];
+            
+            for (NSArray *test in testValues) {
+                NSString *string = test.firstObject;
+                NSString *firstStr = test[1];
+                NSString *secondStr = test.lastObject;
+                BOOL isInterleaving = [StringInterleaving isString:string interleavingOf:firstStr andString:secondStr];
+                NSLog(@"Is pattern match %d", isInterleaving);
+            }
         }
             break;
         default:

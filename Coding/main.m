@@ -10,13 +10,14 @@
 #import "GraphProblems.h"
 #import "ArrayProblems.h"
 #import "CodingProblems.h"
+#import "DPProblems.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 3;
+        int choice = 1;
         switch (choice) {
             case 1:
-                [CodingProblems codingProblemsMenu:1];
+                [CodingProblems codingProblemsMenu:8];
                 break;
             case 2:
                 [ArrayProblems arrayProblemsMenu];
@@ -26,6 +27,9 @@ int main(int argc, const char * argv[]) {
                 break;
             case 4:
                 [GraphProblems graphProblemsMenu];
+                break;
+            case 5:
+                [DPProblems DPProblemsMenu:1];
                 break;
             default:
                 break;
