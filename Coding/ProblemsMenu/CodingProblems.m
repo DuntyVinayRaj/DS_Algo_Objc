@@ -105,14 +105,13 @@
             @[@"ACBCD", @"ABC", @"CD"],
             @[@"ACDABC", @"ABC", @"ACD"]];
             
-            testValues = @[@[@"ACDABC", @"ABC", @"ACD"]];
-            
             for (NSArray *test in testValues) {
                 NSString *string = test.firstObject;
                 NSString *firstStr = test[1];
                 NSString *secondStr = test.lastObject;
                 BOOL isInterleaving = [StringInterleaving isString:string interleavingOf:firstStr andString:secondStr];
-                NSLog(@"Is pattern match %d", isInterleaving);
+                BOOL isRecInterleaving = [StringInterleaving interleavingRec:string firstStr:firstStr secondStr:secondStr];
+                NSLog(@"Is interleaving %d vs rec interleaving %d", isInterleaving, isRecInterleaving);
             }
         }
             break;

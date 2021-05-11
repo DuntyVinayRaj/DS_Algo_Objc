@@ -41,4 +41,28 @@
     return YES;
 }
 
+
+
++ (BOOL)interleavingRec:(NSString *)str firstStr:(NSString *)fStr secondStr:(NSString *)sStr
+{
+    if (str.length == 0 && fStr.length == 0 && sStr.length == 0) {
+        return YES;
+    }
+    
+    if (str.length == 0) {
+        return NO;
+    }
+    
+    if (fStr.length > 0 && ([str characterAtIndex:0] == [fStr characterAtIndex:0])) {
+        return [self interleavingRec:[str substringFromIndex:1] firstStr:[fStr substringFromIndex:1] secondStr:sStr];
+    }
+    
+    if (sStr.length > 0 && ([str characterAtIndex:0] == [sStr characterAtIndex:0])) {
+        return [self interleavingRec:[str substringFromIndex:1] firstStr:fStr secondStr:[sStr substringFromIndex:1]];
+    }
+    
+    return NO;
+}
+
+
 @end

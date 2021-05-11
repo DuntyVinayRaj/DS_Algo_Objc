@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface StringInterleaving : NSObject
 
 + (BOOL)isString:(NSString *)str interleavingOf:(NSString *)firstString andString:(NSString *)secondString;
++ (BOOL)interleavingRec:(NSString *)str firstStr:(NSString *)fStr secondStr:(NSString *)sStr;
 
 @end
 
