@@ -12,15 +12,26 @@
 #import "CodingProblems.h"
 #import "DPProblems.h"
 
+/**
+ Problems to solve :
+ Peak element in array
+ 
+ */
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int choice = 1;
+        
+        NSDictionary *tenantSettings = nil;
+        NSDictionary *filesPolicy = [tenantSettings objectForKey:@"filesPolicy"];
+        NSLog(@"filesPolicy is %@", filesPolicy);
+        
+        int choice = 2;
         switch (choice) {
             case 1:
                 [CodingProblems codingProblemsMenu:8];
                 break;
             case 2:
-                [ArrayProblems arrayProblemsMenu];
+                [ArrayProblems arrayProblemsMenuWithChoice:8];
                 break;
             case 3:
                 [TreeProblems treeProblemsMenu:6];
@@ -29,7 +40,7 @@ int main(int argc, const char * argv[]) {
                 [GraphProblems graphProblemsMenu];
                 break;
             case 5:
-                [DPProblems DPProblemsMenu:1];
+                [DPProblems DPProblemsMenu:2];
                 break;
             default:
                 break;

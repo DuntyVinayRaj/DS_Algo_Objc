@@ -12,12 +12,14 @@
 #import "InversionCount.h"
 #import "QuickSort.h"
 #import "QuickSelect.h"
+#import "MaxStack.h"
+#import "MaxInSlidingWindow.h"
+#import "SmallInSlidingWindow.h"
 
 @implementation ArrayProblems
 
-+ (void)arrayProblemsMenu
++ (void)arrayProblemsMenuWithChoice:(int)choice
 {
-    NSInteger choice = 1;
     switch (choice) {
         case 1:
         {
@@ -59,6 +61,35 @@
             NSArray *ip = @[@8, @4, @2, @1]; //@[@4, @1, @3, @2]; //@[@1, @-2, @3, @-3, @4, @-1];
             int largest = [[[QuickSelect alloc] init] findKth:5 largestInArray:ip];
             NSLog(@"%d", largest);
+        }
+            break;
+        case 7:
+        {
+            MaxStack *maxStack = [[MaxStack alloc] init];
+            [maxStack push:@(3)];
+            NSLog(@"Max element is %@", maxStack.maxElement);
+            
+            [maxStack push:@(7)];
+            NSLog(@"Max element is %@", maxStack.maxElement);
+            
+            [maxStack pop];
+            NSLog(@"Max element is %@", maxStack.maxElement);
+        }
+            break;
+        case 8:
+        {
+            NSArray *ipArray = @[@8, @7, @6, @5, @4, @3];
+            int windowSize = 3;
+            NSArray *result = [MaxInSlidingWindow findMaxElementsIn:ipArray ofWindow:windowSize];
+            NSLog(@"Max are %@", result);
+        }
+            break;
+        case 9:
+        {
+            NSArray *ipArray = @[@0, @3, @4, @5, @6, @7];
+            int windowSize = 3;
+            NSArray *result = [SmallInSlidingWindow findMinElementsIn:ipArray ofWindow:windowSize];
+            NSLog(@"Min are %@", result);
         }
             break;
         default:

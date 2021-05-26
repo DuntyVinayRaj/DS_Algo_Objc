@@ -9,6 +9,7 @@
 
 @implementation StringInterleaving
 
+// This doesn't handle duplicates like the one for ACDABC
 + (BOOL)isString:(NSString *)str interleavingOf:(NSString *)firstString andString:(NSString *)secondString
 {
     // acdb, ab cd
@@ -41,8 +42,6 @@
     return YES;
 }
 
-
-
 + (BOOL)interleavingRec:(NSString *)str firstStr:(NSString *)fStr secondStr:(NSString *)sStr
 {
     if (str.length == 0 && fStr.length == 0 && sStr.length == 0) {
@@ -53,11 +52,11 @@
         return NO;
     }
     
-    if (fStr.length > 0 && ([str characterAtIndex:0] == [fStr characterAtIndex:0])) {
+    if (fStr.length > 0 && ([str characterAtIndex:0] == [fStr characterAtIndex:0]) && [self interleavingRec:[str substringFromIndex:1] firstStr:[fStr substringFromIndex:1]  secondStr:sStr]) {
         return [self interleavingRec:[str substringFromIndex:1] firstStr:[fStr substringFromIndex:1] secondStr:sStr];
     }
     
-    if (sStr.length > 0 && ([str characterAtIndex:0] == [sStr characterAtIndex:0])) {
+    if (sStr.length > 0 && ([str characterAtIndex:0] == [sStr characterAtIndex:0]) && [self interleavingRec:[str substringFromIndex:1] firstStr:fStr secondStr:[sStr substringFromIndex:1]]) {
         return [self interleavingRec:[str substringFromIndex:1] firstStr:fStr secondStr:[sStr substringFromIndex:1]];
     }
     

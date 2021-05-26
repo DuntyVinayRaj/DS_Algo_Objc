@@ -14,6 +14,7 @@
 		2A3C4FDB2641957C0008BB9F /* TreeZigZag.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C4FDA2641957C0008BB9F /* TreeZigZag.m */; };
 		2A3C4FDE264197260008BB9F /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C4FDD264197260008BB9F /* Tree.m */; };
 		2A3C4FE1264197C70008BB9F /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C4FE0264197C70008BB9F /* Queue.m */; };
+		2A7C76762652E58900EB7191 /* Dequeue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C76752652E58900EB7191 /* Dequeue.m */; };
 		2AA0B695264809670058375C /* SumOfDeepestNodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B694264809670058375C /* SumOfDeepestNodes.m */; };
 		2AA0B699264922C50058375C /* MST.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B698264922C50058375C /* MST.m */; };
 		2AA0B69D26497F7D0058375C /* StringRepeat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B69C26497F7D0058375C /* StringRepeat.m */; };
@@ -21,6 +22,12 @@
 		2AA0B6A6264A76EC0058375C /* DPFibonacci.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6A5264A76EC0058375C /* DPFibonacci.m */; };
 		2AA0B6AC264A77FA0058375C /* DPProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6AB264A77FA0058375C /* DPProblems.m */; };
 		2AA0B6B1264A83890058375C /* StringInterleaving.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6B0264A83890058375C /* StringInterleaving.m */; };
+		2AA0B6B5264AA8AD0058375C /* StringInterleavingDP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6B4264AA8AD0058375C /* StringInterleavingDP.m */; };
+		2AA0B6B9264E49070058375C /* MaxInSlidingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6B8264E49070058375C /* MaxInSlidingWindow.m */; };
+		2AA0B6BD264E49710058375C /* MaxStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6BC264E49710058375C /* MaxStack.m */; };
+		2AA0B6C2264EE2E50058375C /* MaxQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6C1264EE2E50058375C /* MaxQueue.m */; };
+		2AA0B6C7264EEF5D0058375C /* SmallInSlidingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6C6264EEF5D0058375C /* SmallInSlidingWindow.m */; };
+		2AA0B6CB264EEFC30058375C /* MinQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA0B6CA264EEFC30058375C /* MinQueue.m */; };
 		2AB4F11E2646C85700B5B1AC /* BoxMaxStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F11D2646C85700B5B1AC /* BoxMaxStack.m */; };
 		2AB4F1292647A09B00B5B1AC /* MirrorATree.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F1282647A09B00B5B1AC /* MirrorATree.m */; };
 		2AB4F1322647CFDC00B5B1AC /* TreeProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB4F1312647CFDC00B5B1AC /* TreeProblems.m */; };
@@ -71,6 +78,8 @@
 		2A3C4FDD264197260008BB9F /* Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
 		2A3C4FDF264197C70008BB9F /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		2A3C4FE0264197C70008BB9F /* Queue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		2A7C76742652E58900EB7191 /* Dequeue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dequeue.h; sourceTree = "<group>"; };
+		2A7C76752652E58900EB7191 /* Dequeue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dequeue.m; sourceTree = "<group>"; };
 		2AA0B693264809670058375C /* SumOfDeepestNodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SumOfDeepestNodes.h; sourceTree = "<group>"; };
 		2AA0B694264809670058375C /* SumOfDeepestNodes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SumOfDeepestNodes.m; sourceTree = "<group>"; };
 		2AA0B697264922C50058375C /* MST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MST.h; sourceTree = "<group>"; };
@@ -85,6 +94,18 @@
 		2AA0B6AB264A77FA0058375C /* DPProblems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPProblems.m; sourceTree = "<group>"; };
 		2AA0B6AF264A83890058375C /* StringInterleaving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringInterleaving.h; sourceTree = "<group>"; };
 		2AA0B6B0264A83890058375C /* StringInterleaving.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringInterleaving.m; sourceTree = "<group>"; };
+		2AA0B6B3264AA8AD0058375C /* StringInterleavingDP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringInterleavingDP.h; sourceTree = "<group>"; };
+		2AA0B6B4264AA8AD0058375C /* StringInterleavingDP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringInterleavingDP.m; sourceTree = "<group>"; };
+		2AA0B6B7264E49070058375C /* MaxInSlidingWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxInSlidingWindow.h; sourceTree = "<group>"; };
+		2AA0B6B8264E49070058375C /* MaxInSlidingWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxInSlidingWindow.m; sourceTree = "<group>"; };
+		2AA0B6BB264E49710058375C /* MaxStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxStack.h; sourceTree = "<group>"; };
+		2AA0B6BC264E49710058375C /* MaxStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxStack.m; sourceTree = "<group>"; };
+		2AA0B6C0264EE2E50058375C /* MaxQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaxQueue.h; sourceTree = "<group>"; };
+		2AA0B6C1264EE2E50058375C /* MaxQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaxQueue.m; sourceTree = "<group>"; };
+		2AA0B6C5264EEF5D0058375C /* SmallInSlidingWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmallInSlidingWindow.h; sourceTree = "<group>"; };
+		2AA0B6C6264EEF5D0058375C /* SmallInSlidingWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmallInSlidingWindow.m; sourceTree = "<group>"; };
+		2AA0B6C9264EEFC30058375C /* MinQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinQueue.h; sourceTree = "<group>"; };
+		2AA0B6CA264EEFC30058375C /* MinQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinQueue.m; sourceTree = "<group>"; };
 		2AB4F11C2646C85700B5B1AC /* BoxMaxStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoxMaxStack.h; sourceTree = "<group>"; };
 		2AB4F11D2646C85700B5B1AC /* BoxMaxStack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoxMaxStack.m; sourceTree = "<group>"; };
 		2AB4F1272647A09B00B5B1AC /* MirrorATree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MirrorATree.h; sourceTree = "<group>"; };
@@ -162,12 +183,20 @@
 				2A3C4FE0264197C70008BB9F /* Queue.m */,
 				2AFFF03B2635B7E300BAC5B5 /* MyStack.h */,
 				2AFFF03C2635B7E300BAC5B5 /* MyStack.m */,
+				2AA0B6BB264E49710058375C /* MaxStack.h */,
+				2AA0B6BC264E49710058375C /* MaxStack.m */,
 				2A3C4FD02640157C0008BB9F /* GraphADT.h */,
 				2A3C4FD12640157C0008BB9F /* GraphADT.m */,
 				2AFFF069263A970200BAC5B5 /* PriorityQueue.h */,
 				2AFFF06A263A970200BAC5B5 /* PriorityQueue.m */,
 				2AFFF06F263B385900BAC5B5 /* BST.h */,
 				2AFFF070263B385900BAC5B5 /* BST.m */,
+				2AA0B6C0264EE2E50058375C /* MaxQueue.h */,
+				2AA0B6C1264EE2E50058375C /* MaxQueue.m */,
+				2AA0B6C9264EEFC30058375C /* MinQueue.h */,
+				2AA0B6CA264EEFC30058375C /* MinQueue.m */,
+				2A7C76742652E58900EB7191 /* Dequeue.h */,
+				2A7C76752652E58900EB7191 /* Dequeue.m */,
 			);
 			path = ADTs;
 			sourceTree = "<group>";
@@ -192,6 +221,8 @@
 			children = (
 				2AA0B6A4264A76EC0058375C /* DPFibonacci.h */,
 				2AA0B6A5264A76EC0058375C /* DPFibonacci.m */,
+				2AA0B6B3264AA8AD0058375C /* StringInterleavingDP.h */,
+				2AA0B6B4264AA8AD0058375C /* StringInterleavingDP.m */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -256,6 +287,10 @@
 				2AFFF05D26383DE200BAC5B5 /* InversionCount.m */,
 				2AFFF064263975A100BAC5B5 /* QuickSelect.h */,
 				2AFFF065263975A100BAC5B5 /* QuickSelect.m */,
+				2AA0B6B7264E49070058375C /* MaxInSlidingWindow.h */,
+				2AA0B6B8264E49070058375C /* MaxInSlidingWindow.m */,
+				2AA0B6C5264EEF5D0058375C /* SmallInSlidingWindow.h */,
+				2AA0B6C6264EEF5D0058375C /* SmallInSlidingWindow.m */,
 			);
 			path = Arrays;
 			sourceTree = "<group>";
@@ -363,15 +398,18 @@
 				2A3C4FE1264197C70008BB9F /* Queue.m in Sources */,
 				2A3C4FD22640157C0008BB9F /* GraphADT.m in Sources */,
 				2AFFF03D2635B7E300BAC5B5 /* MyStack.m in Sources */,
+				2AA0B6C7264EEF5D0058375C /* SmallInSlidingWindow.m in Sources */,
 				2AFFF066263975A100BAC5B5 /* QuickSelect.m in Sources */,
 				2AB4F1292647A09B00B5B1AC /* MirrorATree.m in Sources */,
 				2AFFF0412636DE0000BAC5B5 /* LongestPalindromeSS.m in Sources */,
 				2AA0B6A1264984340058375C /* WildcardPatternMatch.m in Sources */,
+				2AA0B6C2264EE2E50058375C /* MaxQueue.m in Sources */,
 				2AA0B6AC264A77FA0058375C /* DPProblems.m in Sources */,
 				2AFFF071263B385900BAC5B5 /* BST.m in Sources */,
 				2A3C4FDE264197260008BB9F /* Tree.m in Sources */,
 				2AFFF06B263A970200BAC5B5 /* PriorityQueue.m in Sources */,
 				2AFFF04D26370C9500BAC5B5 /* TwoDArray.m in Sources */,
+				2AA0B6B9264E49070058375C /* MaxInSlidingWindow.m in Sources */,
 				2AFFF02F2630561B00BAC5B5 /* main.m in Sources */,
 				2AFFF0492636E74100BAC5B5 /* MajorityElement.m in Sources */,
 				2A126DA42646D03C00D213B9 /* PathBetweenNodes.m in Sources */,
@@ -380,9 +418,13 @@
 				2A3C4FD82640763C0008BB9F /* GraphBFS.m in Sources */,
 				2AB4F11E2646C85700B5B1AC /* BoxMaxStack.m in Sources */,
 				2AB4F13F2647D13B00B5B1AC /* ArrayProblems.m in Sources */,
+				2AA0B6B5264AA8AD0058375C /* StringInterleavingDP.m in Sources */,
 				2A3C4FDB2641957C0008BB9F /* TreeZigZag.m in Sources */,
 				2AA0B6A6264A76EC0058375C /* DPFibonacci.m in Sources */,
+				2A7C76762652E58900EB7191 /* Dequeue.m in Sources */,
+				2AA0B6CB264EEFC30058375C /* MinQueue.m in Sources */,
 				2AA0B69D26497F7D0058375C /* StringRepeat.m in Sources */,
+				2AA0B6BD264E49710058375C /* MaxStack.m in Sources */,
 				2AB4F1322647CFDC00B5B1AC /* TreeProblems.m in Sources */,
 				2A3C4FD5264034680008BB9F /* GraphDFS.m in Sources */,
 				2AA0B6B1264A83890058375C /* StringInterleaving.m in Sources */,

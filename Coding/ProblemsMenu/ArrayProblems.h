@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ArrayProblems : NSObject
 
-+ (void)arrayProblemsMenu;
++ (void)arrayProblemsMenuWithChoice:(int)choice;
 
 @end
 
